@@ -77,7 +77,10 @@ export default function Dashboard() {
           </Button>
         </form>
         <ul>
-          {todos.map((todo: any) => (
+          {
+            todos.length===0 && <div className="text-center">No Data.</div>
+}
+          {todos?.map((todo: any) => (
             <li key={todo.id} className="flex justify-between items-center p-2 border-b">
               <span>{todo.title}</span>
               <div>
